@@ -10,6 +10,6 @@ RUN mkdir /usr/src/QDD && wget -qO - https://people.imbe.fr/~emeglecz/QDDweb/QDD
 	cd /usr/src/QDD && \
 	ln -s /usr/src/QDD/subprogramQDD.pm /etc/perl/ && \
 	ln -s /usr/src/QDD/ncbi_taxonomy.pm /etc/perl/ && \
-	mkdir /etc/qdd && ln /usr/src/QDD/set_qdd_default.ini /etc/qdd/set_qdd_default.ini && chmod a+x *.pl
+	mkdir /etc/qdd && ln /usr/src/QDD/set_qdd_default.ini /etc/qdd/set_qdd_default.ini && chmod a+x *.pl && cp -fr /etc/primer3_config /usr/bin/
 
 ENV PATH="/usr/src/QDD:$PATH"
